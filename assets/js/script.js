@@ -2,14 +2,15 @@
 // Get the button elements and add event listeners to them
 
 document.addEventListener("DOMContentLoaded", function() {
-    let button = document.getElementsByTagName("button");
+    let buttons = document.getElementsByTagName("button");
 
     for (let button of buttons){
         button.addEventListener("click", function() {
             if (this.getAttribute("data-type") === "submit") {
                 alert("You clicked Submit!");
-            }else {
-                
+            } else {
+              let gameType = this.getAttribute("data-tyoe");
+              alert(`You clicked ${gameType}`);  
             }
         })
     }
