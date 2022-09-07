@@ -45,6 +45,18 @@ function runGame(gameType) {
  */
 function checkAnswer() {
 
+    let userAnswer = parseInt(document.getElementById("answer-box").value);
+    let calculateAnswer = calculateCorrectAnswer();
+    let isCorrect = userAnswer === calculateAnswer[0];
+
+    if (isCorrect) {
+        alert("Hay! You got it rigt! :D");
+    } else {
+        alert(`Awwww.... you answerd ${userAnswer}.The correct answer was ${calculateAnswer[0]}!`);
+    }
+
+    runGame(calculateAnswer[1]);
+
 }
 
 /**
