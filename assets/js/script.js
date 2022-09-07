@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function() {
             if (this.getAttribute("data-type") === "submit") {
                 alert("You clicked Submit!");
             } else {
-              let gameType = this.getAttribute("data-tyoe");
+              let gameType = this.getAttribute("data-type");
               runGame(gameType);  
 
             }
@@ -56,9 +56,9 @@ function incrementWrongAnswer() {
 }
 
 function displyAdditionQuestion(operand1, operand2) {
-    document.getElementById('operend1').textContent = operand1;
-    document.getElementById('operend2').textContent = operand2;
-    document.getElementById('operetor').textContent = "+";
+    document.getElementById('operand1').textContent = operand1;
+    document.getElementById('operand2').textContent = operand2;
+    document.getElementById('operator').textContent = "+";
 }
 
 function displySubbtractQuestion() {
