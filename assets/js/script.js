@@ -26,6 +26,8 @@ document.addEventListener("DOMContentLoaded", function() {
  */
 function runGame(gameType) {
 
+    document.getElementById("answer-box").value = "";
+
     // Creates two random numbers between 1 and 25
     let num1 = Math.floor(Math.random() * 25) + 1;
     let num2 = Math.floor(Math.random() * 25) + 1;
@@ -55,11 +57,13 @@ function checkAnswer() {
 
     if (isCorrect) {
         alert("Hay! You got it rigt! :D");
+    
         incrementScore();
     } else {
         alert(`Awwww.... you answerd ${userAnswer}.The correct answer was ${calculateAnswer[0]}!`);
         incrementWrongAnswer();
     }
+
 
     runGame(calculateAnswer[1]);
 
